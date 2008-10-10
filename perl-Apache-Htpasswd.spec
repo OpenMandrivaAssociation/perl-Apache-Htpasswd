@@ -7,7 +7,7 @@ Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    Manage Unix crypt-style password file.
+Summary:    Manage Unix crypt-style password file
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.gz
 BuildRequires: perl(Crypt::PasswdMD5)
