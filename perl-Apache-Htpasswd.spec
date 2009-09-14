@@ -1,6 +1,6 @@
 %define module   Apache-Htpasswd
 %define version    1.8
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
