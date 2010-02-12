@@ -1,18 +1,20 @@
-%define module   Apache-Htpasswd
-%define version    1.8
-%define release    %mkrel 2
+%define upstream_name    Apache-Htpasswd
+%define upstream_version 1.8
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Manage Unix crypt-style password file
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Crypt::PasswdMD5)
 BuildRequires: perl(Digest::SHA1)
 BuildRequires: perl(MIME::Base64)
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
@@ -26,14 +28,14 @@ crypted password. You can use this for non-Apache files if you wish, but it
 was written specifically for .htaccess style files.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
@@ -47,4 +49,3 @@ rm -rf %buildroot
 %doc README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
