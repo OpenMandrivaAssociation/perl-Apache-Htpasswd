@@ -1,15 +1,15 @@
 %define upstream_name    Apache-Htpasswd
-%define upstream_version 1.8
+%define upstream_version 1.9
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Apache/Apache-Htpasswd-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Crypt::PasswdMD5)
@@ -65,4 +65,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Fri Oct 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.8-1mdv2009.1
 - initial mdv release, generated with cpan2dist
+
 

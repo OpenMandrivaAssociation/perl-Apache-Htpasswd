@@ -1,2 +1,4 @@
+removed_sources:
+  Apache-Htpasswd-1.8.tar.gz: 33b67b8675de36379c743e0b1c4810f7f6110915
 sources:
-  "Apache-Htpasswd-1.8.tar.gz": 33b67b8675de36379c743e0b1c4810f7f6110915
+  Apache-Htpasswd-1.9.tar.gz: 6f2844a2d5fcfed0e83c6a824242a4a74bbe5504
