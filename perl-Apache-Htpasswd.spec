@@ -2,14 +2,14 @@
 %define upstream_version 1.9
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/Apache-Htpasswd-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Apache-Htpasswd
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
