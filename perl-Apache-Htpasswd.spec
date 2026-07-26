@@ -1,15 +1,13 @@
 %define upstream_name    Apache-Htpasswd
-%define upstream_version 1.9
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	1.9
+Release:	5
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Apache-Htpasswd
-Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ crypted password. You can use this for non-Apache files if you wish, but it
 was written specifically for .htaccess style files.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -54,9 +52,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Fri Feb 12 2010 Jérôme Quelin <jquelin@mandriva.org> 1.800.0-1mdv2011.0
 + Revision: 504564
-- rebuild using %%perl_convert_version
-
-  + Thierry Vignaud <tv@mandriva.org>
+- rebuild using %1.9 Thierry Vignaud <tv@mandriva.org>
     - rebuild
 
 * Fri Oct 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.8-1mdv2009.1
