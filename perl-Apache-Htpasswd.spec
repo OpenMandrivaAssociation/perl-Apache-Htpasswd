@@ -2,7 +2,7 @@
 %define upstream_version 1.9
 Name:		perl-%{upstream_name}
 Version:	1.9
-Release:	5
+Release:	6
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
@@ -11,6 +11,7 @@ Url:		https://metacpan.org/dist/Apache-Htpasswd
 Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-1.9.tar.gz
 
 BuildRequires:	make
+BuildRequires:	perl(Crypt::URandom)
 BuildRequires:	perl-devel
 BuildRequires:	perl(Crypt::PasswdMD5)
 BuildRequires:	perl(Digest::SHA1)
@@ -32,11 +33,11 @@ was written specifically for .htaccess style files.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
+:  # soft check
 :  # soft check
 %make test || :
 
