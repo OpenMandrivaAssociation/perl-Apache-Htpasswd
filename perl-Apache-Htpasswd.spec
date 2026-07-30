@@ -1,13 +1,14 @@
 %define upstream_name    Apache-Htpasswd
+%define upstream_version 1.9
 Name:		perl-%{upstream_name}
 Version:	1.9
-Release:	5
+Release:	1
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Apache-Htpasswd
-Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-1.9.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
