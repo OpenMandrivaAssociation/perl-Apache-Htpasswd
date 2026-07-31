@@ -2,7 +2,7 @@
 %define upstream_version 1.9
 Name:		perl-%{upstream_name}
 Version:	1.9
-Release:	1
+Release:	2
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
@@ -12,6 +12,7 @@ Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMELTZ/Apache-Htpasswd-1.9.ta
 
 BuildRequires:	make
 BuildRequires:	perl(Crypt::URandom)
+Requires:	perl(Crypt::URandom)
 BuildRequires:	perl-devel
 BuildRequires:	perl(Crypt::PasswdMD5)
 BuildRequires:	perl(Digest::SHA1)
