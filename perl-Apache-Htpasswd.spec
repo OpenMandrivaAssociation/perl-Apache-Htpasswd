@@ -2,7 +2,7 @@
 %define upstream_version 1.9
 Name:		perl-%{upstream_name}
 Version:	1.9
-Release:	49
+Release:	1
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
@@ -39,13 +39,14 @@ perl Makefile.PL INSTALLDIRS=vendor
 set +e
 :  # soft check
 :  # soft check
+make test || :
 %make test || :
 
 %install
 %makeinstall_std
 
 %files
-%doc README
+%doc META.yml README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
