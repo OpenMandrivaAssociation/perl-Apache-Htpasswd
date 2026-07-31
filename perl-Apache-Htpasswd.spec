@@ -2,7 +2,7 @@
 %define upstream_version 1.9
 Name:		perl-%{upstream_name}
 Version:	1.9
-Release:	25
+Release:	26
 
 Summary:	Manage Unix crypt-style password file
 License:	GPL+ or Artistic
